@@ -1,5 +1,5 @@
 <template>
-  <div id="Main" style="height: 500px; width: 1200px">
+  <div id="Main" style="height: 500px; width: 2000px">
   </div>
 </template>
 <script>
@@ -26,7 +26,7 @@ export default {
       var that = this
       var cityList = []
       var jobList = []
-      Vue.http.get('http://localhost/' + that.job).then(function (response) {
+      Vue.http.get('http://localhost/main/' + that.job).then(function (response) {
         for (var city in response.body) {
           cityList.push(city)
           jobList.push(response.body[city]['count'])
@@ -52,6 +52,6 @@ export default {
 </script>
 <style scoped>
 #Main {
-    margin-left:300px;
+    margin-left:250px;
   }
 </style>

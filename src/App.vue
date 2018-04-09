@@ -24,10 +24,14 @@ export default {
       jobMap: [
         {name: 'Python', route: 'python'},
         {name: 'PHP', route: 'php'},
-        {name: '大数据', route: 'big_data'},
-        {name: 'C++', route: 'c_plus'},
+        {name: '大数据', route: 'big-data'},
+        {name: 'C++', route: 'c-plus'},
         {name: 'IOS', route: 'ios'},
-        {name: 'JAVA', route: 'java'}
+        {name: 'JAVA', route: 'java'},
+        {name: '数据挖掘', route: 'data-mining'},
+        {name: '产品经理', route: 'program-manager'},
+        {name: 'Web', route: 'web'},
+        {name: '机器学习', route: 'ml'}
       ]
     }
   }
