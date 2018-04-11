@@ -1,14 +1,14 @@
 <template>
   <div id="app">
     <div class="navbar-collapse collapse templatemo-sidebar">
-      <ul class="templatemo-sidebar-menu">
-        <li class="active"><a href="/"><i class="fa fa-home"></i>Home</a></li>
-        <li class="sub open">
+      <div onclick="window.location.href = './'" class="active"><a><i class="fa fa-home"></i>Home</a></div>
+      <ul class="templatemo-sidebar-menu" v-bind:key="index" v-for="(job, index) in jobMap">
+        <li class="sub">
           <a href="javascript:;">
-            <i class="fa fa-database"></i> Nested Menu <div class="pull-right"><span class="caret"></span></div>
+            <i class="fa fa-database"></i> {{job.name}} <div class="pull-right"><span class="caret"></span></div>
           </a>
           <ul class="templatemo-submenu" >
-            <li v-bind:key="index" v-for="(job, index) in jobMap"><router-link :to="{path: '/main', query: {route: job.route}}">{{job.name}}</router-link></li>
+            <li><router-link :to="{path: '/main', query: {route: job.route}}">{{job.name}}</router-link></li>
           </ul>
         </li>
       </ul>

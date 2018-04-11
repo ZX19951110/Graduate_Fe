@@ -8,7 +8,6 @@ import resource from 'vue-resource'
 Vue.use(resource)
 Vue.config.productionTip = false
 Vue.prototype.$echarts = echarts
-
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
