@@ -60,6 +60,8 @@ h1 { font-size: 24px; }
 }
 .navbar-header { color: rgb(127,127,127); }
 .templatemo-sidebar > div {
+  position: relative;
+  top: 25px;
   height:70px;
   background-color: rgb(235,235,235);
   display: block;

@@ -8,7 +8,7 @@
             <i class="fa fa-database"></i> {{job.name}} <div class="pull-right"><span class="caret"></span></div>
           </a>
           <ul class="templatemo-submenu" >
-            <li><router-link :to="{path: '/main', query: {route: job.route}}">{{job.name}}</router-link></li>
+            <li><router-link :to="{path: '/main', query: {route: job.route}}">全国分布</router-link></li>
           </ul>
         </li>
       </ul>
