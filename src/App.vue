@@ -9,6 +9,7 @@
           </a>
           <ul class="templatemo-submenu" >
             <li><router-link :to="{path: '/main', query: {route: job.route}}">全国分布</router-link></li>
+            <li><router-link :to="{path: '/salary', query: {route: job.route}}">起薪分布</router-link></li>
           </ul>
         </li>
       </ul>
