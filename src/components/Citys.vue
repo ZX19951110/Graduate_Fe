@@ -1,15 +1,15 @@
 <template>
-  <div>
-    <button class="btn btn-dark" v-on:click="getData('北京')">北京</button>
+  <div id="main">
     <button class="btn btn-primary" v-on:click="getData('上海')">上海</button>
-    <button class="btn btn-warning" v-on:click="getData('上海')">广州</button>
+    <button class="btn btn-dark" v-on:click="getData('北京')">北京</button>
+    <button class="btn btn-warning" v-on:click="getData('广州')">广州</button>
     <button class="btn btn-danger" v-on:click="getData('深圳')">深圳</button>
     <button class="btn btn-success" v-on:click="getData('成都')">成都</button>
     <button class="btn btn-dark" v-on:click="getData('武汉')">武汉</button>
     <button class="btn btn-primary" v-on:click="getData('杭州')">杭州</button>
     <button class="btn btn-warning" v-on:click="getData('南京')">南京</button>
     <button class="btn btn-danger" v-on:click="getData('西安')">西安</button>
-    <div id="main" style="height: 700px; width: 1250px"></div>
+    <div id="pie" style="height: 700px; width: 1250px"></div>
   </div>
 </template>
 <script>
@@ -23,13 +23,13 @@ export default {
     }
   },
   mounted () {
-    this.getData('北京')
+    this.getData('上海')
   },
   methods: {
     getData: function (city) {
       let that = this
       that.job = city
-      let myChart = that.$echarts.init(document.getElementById('main'))
+      let myChart = that.$echarts.init(document.getElementById('pie'))
       myChart.showLoading()
       let dataList = []
       Vue.http.get('http://localhost/area?area=' + city).then(function (response) {
@@ -39,7 +39,7 @@ export default {
         myChart.hideLoading()
         myChart.setOption({
           title: {
-            text: city + '主要职位百分比',
+            text: city + '主要职位百分比(共' + response.body.total + '条)',
             left: 'center',
             top: 20,
             textStyle: {
@@ -49,15 +49,6 @@ export default {
           tooltip: {
             trigger: 'item',
             formatter: '{a} <br/>{b} : {c} ({d}%)'
-          },
-
-          visualMap: {
-            show: false,
-            min: 80,
-            max: 600,
-            inRange: {
-              colorLightness: [0, 1]
-            }
           },
           series: [
             {
@@ -86,8 +77,8 @@ export default {
               },
               itemStyle: {
                 normal: {
-                  color: '#c23531',
-                  shadowBlur: 100,
+                  color: '#999',
+                  shadowBlur: 150,
                   shadowColor: 'rgba(0, 0, 0, 0.5)'
                 }
               },
