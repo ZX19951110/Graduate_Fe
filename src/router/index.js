@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Main from '@/components/Main'
 import Salary from '@/components/Salary'
+import Citys from '@/components/Citys'
 Vue.use(Router)
 
 export default new Router({
@@ -21,6 +22,11 @@ export default new Router({
       path: '/salary',
       name: 'salary',
       component: Salary
+    },
+    {
+      path: '/citys',
+      name: 'citys',
+      component: Citys
     }
   ]
 })
