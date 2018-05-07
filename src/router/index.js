@@ -5,6 +5,8 @@ import Main from '@/components/Main'
 import Salary from '@/components/Salary'
 import Citys from '@/components/Citys'
 import Workyear from '@/components/Workyear'
+import Education from '@/components/Education'
+import Label from '@/components/Label'
 Vue.use(Router)
 
 export default new Router({
@@ -33,6 +35,16 @@ export default new Router({
       path: '/workyear',
       name: 'workyear',
       component: Workyear
+    },
+    {
+      path: '/education',
+      name: 'education',
+      component: Education
+    },
+    {
+      path: '/label',
+      name: 'label',
+      component: Label
     }
   ]
 })

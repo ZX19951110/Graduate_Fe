@@ -12,6 +12,8 @@
             <li><router-link :to="{path: '/main', query: {route: job.route}}">全国分布</router-link></li>
             <li><router-link :to="{path: '/salary', query: {route: job.route}}">起薪分布</router-link></li>
             <li><router-link :to="{path: '/workyear', query: {route: job.route}}">工作年限百分比</router-link></li>
+            <li><router-link :to="{path: '/education', query: {route: job.route}}">教育程度要求</router-link> </li>
+            <li><router-link :to="{path: '/label', query: {route: job.route}}">公司福利占比</router-link> </li>
           </ul>
         </li>
       </ul>
