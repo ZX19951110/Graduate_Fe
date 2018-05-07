@@ -1,5 +1,5 @@
 <template>
-<div id="education" style="height: 700px; width: 1250px"></div>
+<div id="education"></div>
 </template>
 
 <script>
@@ -113,5 +113,7 @@ export default {
 <style scoped>
   #education {
     margin-left:250px;
+    height: 700px;
+    width: 1250px
   }
 </style>

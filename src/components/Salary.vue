@@ -1,5 +1,5 @@
 <template>
-  <div id="salary" style="height: 700px; width: 1250px">
+  <div id="salary">
   </div>
 </template>
 <script>
@@ -42,13 +42,19 @@ export default {
         Echarts.hideLoading()
         let salaryArr = []
         let cityArr = []
+        let job = ''
         for (let i in response.body) {
           cityArr.push(response.body[i].city)
           salaryArr.push(response.body[i].salary)
         }
+        for (let i in that.jobMap) {
+          if (that.jobMap[i].route === that.job) {
+            job = that.jobMap[i].name
+          }
+        }
         Echarts.setOption({
           title: {
-            text: that.job + '相关职业在全国起薪分布',
+            text: job + '相关职业在全国起薪分布',
             x: 'center'
           },
           tooltip: {},
@@ -96,5 +102,7 @@ export default {
 <style scoped>
   #salary {
     margin-left:250px;
+    height: 700px;
+    width: 1250px
   }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div id="workyear" style="height: 700px; width: 1250px"></div>
+  <div id="workyear"></div>
 </template>
 <script>
 import Vue from 'vue'
@@ -111,5 +111,7 @@ export default {
 <style scoped>
   #workyear {
     margin-left:250px;
+    height: 700px;
+    width: 1250px
   }
 </style>

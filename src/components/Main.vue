@@ -1,5 +1,5 @@
 <template>
-  <div id="Main" style="height: 700px; width: 1250px">
+  <div id="Main">
   </div>
 </template>
 <script>
@@ -101,6 +101,8 @@ export default {
 </script>
 <style scoped>
 #Main {
-    margin-left:250px;
+  margin-left:250px;
+  height: 700px;
+  width: 1250px
   }
 </style>

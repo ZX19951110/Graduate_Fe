@@ -9,7 +9,7 @@
     <button class="btn btn-primary" v-on:click="getData('杭州')">杭州</button>
     <button class="btn btn-warning" v-on:click="getData('南京')">南京</button>
     <button class="btn btn-danger" v-on:click="getData('西安')">西安</button>
-    <div id="pie" style="height: 700px; width: 1250px"></div>
+    <div id="pie"></div>
   </div>
 </template>
 <script>
@@ -99,5 +99,9 @@ export default {
 <style scoped>
   #main {
     margin-left:250px;
+  }
+  #pie {
+    height: 700px;
+    width: 1250px
   }
 </style>
