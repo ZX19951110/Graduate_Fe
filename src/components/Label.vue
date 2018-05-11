@@ -38,7 +38,7 @@ export default {
       let that = this
       let myChart = that.$echarts.init(document.getElementById('label'))
       myChart.showLoading()
-      Vue.http.get('http://localhost/label?job=' + that.job).then(function (response) {
+      Vue.http.get('/label?job=' + that.job).then(function (response) {
         let resList = []
         let job = ''
         for (let i in response.body) {

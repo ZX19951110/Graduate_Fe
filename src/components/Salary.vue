@@ -38,7 +38,7 @@ export default {
       let that = this
       let Echarts = that.$echarts.init(document.getElementById('salary'))
       Echarts.showLoading()
-      Vue.http.get('http://localhost/salary/show?job=' + that.job).then(function (response) {
+      Vue.http.get('/salary/show?job=' + that.job).then(function (response) {
         Echarts.hideLoading()
         let salaryArr = []
         let cityArr = []

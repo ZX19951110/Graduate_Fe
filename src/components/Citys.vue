@@ -32,7 +32,7 @@ export default {
       let myChart = that.$echarts.init(document.getElementById('pie'))
       myChart.showLoading()
       let dataList = []
-      Vue.http.get('http://localhost/area?area=' + city).then(function (response) {
+      Vue.http.get('/area?area=' + city).then(function (response) {
         for (let i in response.body.content) {
           dataList.push({value: response.body.content[i], name: i})
         }

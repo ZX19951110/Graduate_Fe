@@ -40,7 +40,7 @@ export default {
       let cityList = []
       let jobList = []
       myChart.showLoading()
-      Vue.http.get('http://localhost/main/' + that.job).then(function (response) {
+      Vue.http.get('/main/' + that.job).then(function (response) {
         let job = ''
         myChart.hideLoading()
         for (let city in response.body) {
